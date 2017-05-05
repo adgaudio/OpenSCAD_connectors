@@ -5,7 +5,7 @@
  *   - Create 24 (24=4*3*2) cylinders,
  *     spaced every 5mm along X, every 10mm along y and every 15mm along z
  *
- * include <./PATH/TO/repeat_grid.scad>
+ * use <./PATH/TO/repeat_grid.scad>
  * repeat_grid([4,3,2], [5,10,15]) {
  *   cylinder(r=5/2,h=5);
  * }

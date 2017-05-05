@@ -1,16 +1,16 @@
-include <repeat_grid.scad>
-include <defaults.scad>
-include <connector.scad>
+use <repeat_grid.scad>
+use <connector.scad>
 
 /*
  * Create many different kinds of corner brackets with this module.
  *
  * EXAMPLES:
- * corner_bracket(1, 0, 1);  // Join 2 extrusions on the x and z planes
- * corner_bracket(2, 1, 0);  // Join 2 extrusions on the x and y planes
- * corner_bracket(2, 1, 1);  // Join 3 extrusions on the x,y,z planes OR join 2 extrusions on the y,z plane
+ * corner_bracket(1, 0, 1);  // Join 2 extrusions on the x and z axes
+ * corner_bracket(2, 1, 0);  // Join 2 extrusions on the x and y axes
+ * corner_bracket(2, 1, 1);  // Join 3 extrusions on the x,y,z axes OR
+ *                              join 2 extrusions on the y and z axes
  *
- * corner_bracket(3,3,3);  // extend in many directions
+ * corner_bracket(3,4,5);  // extend in many directions
  * corner_bracket(2,2,2, bolt_hole_offset=4);  // offset can be very useful
  *
  *
@@ -83,3 +83,5 @@ module isosceles_triangle_2D(l) {
     rotate([0,0,45])square(l*2);
   }
 }
+
+include <defaults.scad>

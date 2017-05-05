@@ -1,5 +1,4 @@
 // 2020 extrusions are the smallest unit of measurement
-include <defaults.scad>
 
 
 /*
@@ -35,3 +34,6 @@ module connector(
           }
   }
 }
+
+
+include <defaults.scad>

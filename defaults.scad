@@ -1,5 +1,5 @@
-// TODO: docstring
-
+// Constant global variables that set defaults for the modules in this library
+// Other scad files will include this at the bottom of the file
 
 default_extrusion_side_length = 20;
 default_thickness = 2;

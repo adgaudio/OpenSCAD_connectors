@@ -1,5 +1,4 @@
 use <repeat_grid.scad>
-use <defaults.scad>
 
 /*
  * Generate endcaps for aluminum extrusions.
@@ -88,3 +87,5 @@ module _endcap_1x1(h, th, min_side_length, bolt_hole) {
       }
     }
 }
+
+include <defaults.scad>
