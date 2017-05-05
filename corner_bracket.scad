@@ -18,7 +18,8 @@ use <connector.scad>
  *
  *   n_holes_{x,y,z} - how many screw holes in each dimension.
  *       Screw holes are spaced every `side_length` mm
- *   side_length - how long the side of the extrusion is.  A 2020 extrusion is 20mm.
+ *   side_length - how long the side of the extrusion is.
+ *       By default, a 2020 extrusion is 20mm on all sides.
  *   {xz,xy,yz}_side_plate - whether or not to use supporting side plates (if
  *       relevant).
  *   side_plate_th - the wall thickness of the support.
