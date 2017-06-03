@@ -40,10 +40,6 @@ module tjoint(
     th=default_thickness,
     bolt_diameter=m5_hole_tight,
     bolt_hole_offset=default_bolt_hole_offset) {
-  // TODO
-  // TODO: grid of different objects
-  // TODO: demo.scad using grid
-  //
 
   translate([-connector1[1]*side_length-side_length/2,0-side_length/2,0])
     connector(connector1[0], width=side_length, base_length=side_length,
