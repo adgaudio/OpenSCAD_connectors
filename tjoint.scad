@@ -58,4 +58,4 @@ module tjoint(
       th=th, bolt_diameter=bolt_diameter, bolt_hole_offset=bolt_hole_offset);
 }
 
-include <defaults.scad>
+include <_defaults.scad>
