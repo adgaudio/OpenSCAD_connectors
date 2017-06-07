@@ -24,10 +24,10 @@ How to use this library:
         corner_bracket(1, 0, 1);
 
         use <2020_connectors/tjoint.scad>
-        tjoint([4,2], [3,1])
+        tjoint([4,2], [3,1]);
 
-        use <2020_connectors/tjoint.scad>
-        tjoint([4,2], [3,1])
+        use <2020_connectors/connector.scad>
+        connector([2,2]);
 
 
 
