@@ -1,4 +1,5 @@
 // 2020 extrusions are the smallest unit of measurement
+use <grid.scad>
 
 
 /*
@@ -42,3 +43,19 @@ module connector(
 
 
 include <_defaults.scad>
+
+// demo
+
+translate([0,120,0])text("connector(num_holes, ...);", halign="center");
+translate([-20,-10,0])grid([90, 45], center=true) {
+  text("(4)", size=6);
+  text("(1, bolt_hole_offset=3)", size=6);
+  text("([2,3])", size=6);
+  text("([3,2], width=30, base_length=10, th=20)", size=6);
+}
+grid([90, 45], center=true) {
+  connector(4);
+  connector(1, bolt_hole_offset=3);
+  connector([2,3]);
+  connector([3,2], width=30, base_length=10, th=20);
+}

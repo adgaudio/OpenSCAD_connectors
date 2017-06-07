@@ -1,5 +1,6 @@
 use <repeat_grid.scad>
 use <connector.scad>
+use <grid.scad>;
 
 /*
  * Create many different kinds of corner brackets with this module.
@@ -86,3 +87,27 @@ module isosceles_triangle_2D(l) {
 }
 
 include <_defaults.scad>
+
+// demo:
+
+translate([0,65,0])text("corner_bracket(n_holes_x, n_holes_y, n_holes_z, ...);", halign="center");
+translate([0,35,0])grid([90], center=true) {
+  union() {
+  translate([0,7,0])text("(2, 2, 2, ", size=6);
+  text("  bolt_hole_offset=4)", size=6);
+  }
+  text("(3, 1, 2)", size=6);
+  text("(2, 1, 0)", size=6);
+  text("(1, 0, 1)", size=6);
+  text("(2, 1, 1)", size=6);
+  text("(1, 1, 1)", size=6);
+
+}
+grid([90], center=true) {
+  corner_bracket(2,2,2, bolt_hole_offset=4);
+  corner_bracket(3,1,2);
+  corner_bracket(2, 1, 0);
+  corner_bracket(1, 0, 1);
+  corner_bracket(2, 1, 1);
+  corner_bracket(1, 1, 1);
+}

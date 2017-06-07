@@ -1,4 +1,5 @@
 use <connector.scad>
+use <grid.scad>
 
 /*
  * Create joints to pull together 2 extrusions at different angles in the
@@ -55,3 +56,24 @@ module tjoint(
 }
 
 include <_defaults.scad>
+
+// demo
+
+translate([0,75+15,0])text("tjoint([Xnum_screw_holes, Xintersect_index],", halign="center");
+translate([28,75   ,0])text("[Ynum_screw_holes, Yintersect_index], ...);", halign="center");
+translate([0,55,0])grid(105, center=true) {
+  text("([4,0], [3,0])", size=6);
+  text("([4,1], [3,0])", size=6);
+  text("([4,2], [3,0])", size=6);
+  text("([4,2], [3,1])", size=6);
+
+  text("([3,0], [3,2], angle=45)", size=6);  // you can use different angles
+  }
+grid(105, center=true) {
+  tjoint([4,0], [3,0]);
+  tjoint([4,1], [3,0]);
+  tjoint([4,2], [3,0]);
+  tjoint([4,2], [3,1]);
+
+  tjoint([3,0], [3,2], angle=45);  // you can use different angles
+}

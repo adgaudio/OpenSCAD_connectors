@@ -1,17 +1,13 @@
+2020 Connectors
+===
+
 A Collection of connectors for 2020 Aluminum Extrusions.  This library tries to
 offer the varieties of basic bracket, joint or endcap you might need when
 working with aluminum extrusions.
 
-It is a goal of this project to capture most common scenarios and while
-minimizing the number of modules exposed to end users.  A single module, like
-"corner_bracket(...)", can create many kinds of corner brackets.
-
-It does not yet cover fancy things like fastening smooth rods to
-extrusions or nema motor mounts, but basic t joints and various kinds of corner
-brackets are available.
-
-If you have some need that this library does not supply but probably should, I
-would love if you open an issue and, if you can, create a PR!
+![corner_bracket.png](images/corner_bracket.png)
+![tjoint.png](images/tjoint.png)
+![connector.png](images/connector.png)
 
 
 How to use this library:
@@ -32,3 +28,20 @@ How to use this library:
 
         use <2020_connectors/tjoint.scad>
         tjoint([4,2], [3,1])
+
+
+
+Goal
+===
+
+It is a goal of this project to capture most common scenarios and while
+minimizing the number of modules exposed to end users.  A single module, like
+"corner_bracket(...)", can create many kinds of corner brackets.
+
+It does not yet cover fancy things like fastening smooth rods to
+extrusions or nema motor mounts, but basic t joints and various kinds of corner
+brackets are available.
+
+If you have some need that this library does not supply but probably should, I
+would love if you open an issue and, if you can, create a PR!
+
