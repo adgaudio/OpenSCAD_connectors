@@ -12,6 +12,8 @@ extrusions.
 ![repeat_grid.png](images/repeat_grid.png)
 
 
+On Thingiverse for STL files: https://www.thingiverse.com/thing:2374332
+
 How to use this library:
 ===
 
