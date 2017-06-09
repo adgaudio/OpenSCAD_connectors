@@ -5,6 +5,8 @@ use <repeat_grid.scad>
  *
  * These have been tested to fit Openbuilds and Misumi 20mm extrusions.
  *
+ * ** EXPERIMENTAL **  api subject to change without notice
+ *
  * EXAMPLES
  * endcap(20,20);  // For a 2020 extrusion:
  * endcap(20,40);  // For a 2040 extrusion:
