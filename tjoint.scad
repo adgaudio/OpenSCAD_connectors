@@ -15,15 +15,18 @@ use <grid.scad>
  *   tjoint([4,0], [3,0]);
  *   tjoint([4,1], [3,0]);
  *   tjoint([4,2], [3,0]);
- *   tjoint([4,2], [3,1]);
+ *   tjoint([4,2], [3,1], bolt_hole_offset=4);
  *
  *   tjoint([5,2], [5,2], 45);  // you can use different angles
+ *   tjoint([[3,2],1], [[2,2],2]);  // you can specify 2d connectors
+ *
  *
  *
  * Parameters:
  *
- *   connector{1,2} - an array in form: [num_screw_holes, intersect_index]
- *       "num_holes" specifies how long to make the connector.
+ *   connector{1,2} - an array in form: [n_holes, intersect_index]
+ *       "n_holes" specifies how long to make the connector.
+ *         It can be an array or a scalar value.
  *       "intersect_index" specifies at which hole on this connector to
  *       intersect the other connector.
  *   angle - the degrees at which these two connectors connect
@@ -55,25 +58,29 @@ module tjoint(
       th=th, bolt_diameter=bolt_diameter, bolt_hole_offset=bolt_hole_offset);
 }
 
-include <_defaults.scad>
 
 // demo
 
-translate([0,75+15,0])text("tjoint([Xnum_screw_holes, Xintersect_index],", halign="center");
-translate([28,75   ,0])text("[Ynum_screw_holes, Yintersect_index], ...);", halign="center");
+translate([0,85+20,0])text("tjoint([X_n_holes, Xintersect_index],", halign="center");
+translate([28,85,0])text("[Y_n_holes, Yintersect_index], ...);", halign="center");
 translate([0,55,0])grid(105, center=true) {
   text("([4,0], [3,0])", size=6);
   text("([4,1], [3,0])", size=6);
+  text("([[3,2],1], [[2,2],2])", size=6);
+  translate([-60,0,0])text("([4,2], [3,1], bolt_hole_offset=4)", size=6);
   text("([4,2], [3,0])", size=6);
-  text("([4,2], [3,1])", size=6);
 
-  text("([3,0], [3,2], angle=45)", size=6);  // you can use different angles
+  translate([-40,0,0])text("([3,0], [3,2], angle=45)", size=6);
   }
 grid(105, center=true) {
   tjoint([4,0], [3,0]);
   tjoint([4,1], [3,0]);
+  tjoint([[3,2],1], [[2,2],2]);
+  tjoint([4,2], [3,1], bolt_hole_offset=4);
   tjoint([4,2], [3,0]);
-  tjoint([4,2], [3,1]);
 
-  tjoint([3,0], [3,2], angle=45);  // you can use different angles
+  tjoint([3,0], [3,2], angle=45);
 }
+
+
+include <_defaults.scad>
