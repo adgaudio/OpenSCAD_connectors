@@ -42,8 +42,6 @@ module connector(
 }
 
 
-include <_defaults.scad>
-
 // demo
 
 translate([0,120,0])text("connector(num_holes, ...);", halign="center");
@@ -59,3 +57,6 @@ grid([90, 45], center=true) {
   connector([2,3]);
   connector([3,2], width=30, base_length=10, th=20);
 }
+
+
+include <_defaults.scad>

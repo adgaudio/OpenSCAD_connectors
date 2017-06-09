@@ -88,4 +88,5 @@ module _endcap_1x1(h, th, min_side_length, bolt_hole) {
     }
 }
 
+
 include <_defaults.scad>
