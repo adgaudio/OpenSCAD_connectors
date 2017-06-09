@@ -9,6 +9,7 @@ extrusions.
 ![corner_bracket.png](images/corner_bracket.png)
 ![tjoint.png](images/tjoint.png)
 ![connector.png](images/connector.png)
+![repeat_grid.png](images/repeat_grid.png)
 
 
 How to use this library:
