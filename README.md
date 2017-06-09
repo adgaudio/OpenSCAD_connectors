@@ -1,9 +1,10 @@
-2020 Connectors
+OpenSCAD Connectors
 ===
 
-A Collection of connectors for 2020 Aluminum Extrusions.  This library tries to
-offer the varieties of basic bracket, joint or endcap you might need when
-working with aluminum extrusions.
+A Collection of connectors, mostly geared towards working with 2020
+Aluminum extrusions.  This library tries to offer the varieties of basic
+bracket, joint or endcap you might need when working with aluminum
+extrusions.
 
 ![corner_bracket.png](images/corner_bracket.png)
 ![tjoint.png](images/tjoint.png)
@@ -20,13 +21,13 @@ How to use this library:
 
 1. Import the relevant code and use it:
 
-        use <2020_connectors/corner_bracket.scad>
+        use <OpenSCAD_connectors/corner_bracket.scad>
         corner_bracket(1, 0, 1);
 
-        use <2020_connectors/tjoint.scad>
+        use <OpenSCAD_connectors/tjoint.scad>
         tjoint([4,2], [3,1]);
 
-        use <2020_connectors/connector.scad>
+        use <OpenSCAD_connectors/connector.scad>
         connector([2,2]);
 
 
